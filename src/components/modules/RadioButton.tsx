@@ -22,7 +22,7 @@ const RadioButton: FC<RadioButtonProps> = ({ form, data, name, label }) => {
                         <FormLabel>{ label}</FormLabel>
                         <FormControl>
                             <RadioGroup
-                                onValueChange={(value) => field.onChange(value === 'true')}
+                                onValueChange={field.onChange}
                                 defaultValue={field.value}
                                 className="flex flex-col space-y-1"
                             >

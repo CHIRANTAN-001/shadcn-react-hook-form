@@ -33,11 +33,11 @@ const Home = () => {
 
     const radioOptions = [
         {
-            value: "true",
+            value: "yes",
             label: "Yes",
         },
         {
-            value: "false",
+            value: "no",
             label: "No",
         }
     ]
@@ -53,8 +53,8 @@ const Home = () => {
 
     return (
         <Fragment>
-            <div className='bg-black h-screen flex justify-center items-center'>
-                <div className='bg-white p-8 rounded-lg shadow-lg'>
+            <div className=' flex justify-center items-center py-4'>
+                <div className='bg-white border rounded-lg p-8 shadow-lg'>
                     <FormProvider {...form}>
                         <form onSubmit={form.handleSubmit(onSubmit)} className='w-96'>
                             <InputComponent
@@ -83,6 +83,20 @@ const Home = () => {
                                 name="phone"
                                 label="Phone"
                                 placeholder="Enter phone number"
+                                type="text"
+                            />
+                            <InputComponent
+                                form={form}
+                                name="location.country"
+                                label="Country"
+                                placeholder="Enter country"
+                                type="text"
+                            />
+                            <InputComponent
+                                form={form}
+                                name="location.city"
+                                label="City"
+                                placeholder="Enter city"
                                 type="text"
                             />
                             <CheckBoxComponent

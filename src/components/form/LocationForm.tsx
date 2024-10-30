@@ -7,6 +7,7 @@ type LocationFormProps = {
     errors: any
 }
 
+
 const LocationForm: FC<LocationFormProps> = ({register, errors}) => {
   return (
       <Fragment>
